@@ -1,0 +1,11 @@
+<Documents>
+    <Document>
+        <Note>
+            <NoteId>1</NoteId>
+            <Author>Kamila M.</Author>
+            <Tittle>Apache Kafka</Tittle>
+            <Content>Prepare materials about Apache Kafka to seminar</Content>
+            <Date>2020-05-21</Date>
+        </Note>
+    </Document>
+</Documents>

@@ -1,0 +1,11 @@
+<Documents>
+    <Document>
+        <Note>
+            <NoteId>[(${noteId})]</NoteId>
+            <Author>[(${authorName})]</Author>
+            <Tittle>[(${title})]</Tittle>
+            <Content>[(${content})]</Content>
+            <Date>[(${date})]</Date>
+        </Note>
+    </Document>
+</Documents>
