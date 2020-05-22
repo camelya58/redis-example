@@ -9,10 +9,9 @@ import org.springframework.web.bind.annotation.*;
 import java.time.LocalDate;
 
 /**
- * Класс
+ * Обычный REST-контроллер для обработки входящих JSON-запросов
  *
  * @author Kamila Meshcheryakova
- * Last review .... by ...
  */
 @RestController
 @RequestMapping("/notes")
