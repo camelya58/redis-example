@@ -7,6 +7,10 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 /**
  * Класс XmlOutRepository предназначен для записи xml файла в папке по указанному пути
@@ -29,23 +33,18 @@ public class XmlOutRepository {
     public synchronized void createAndSave(Note note, String currentDate) {
 
         String xml = xmlHelper.makeXml(note, currentDate);
-        File file = new File("imports/" + currentDate + "/note-" + note.getId()+".xml");
+        String fileName = note.getTitle() + "-" + note.getId()+".xml";
+        Path dir = Paths.get("imports", currentDate);
+        Path pathToFile = dir.resolve(fileName);
+
         try {
-            if (!file.getParentFile().exists()) {
-                file.getParentFile().mkdirs();
+            if (Files.notExists(pathToFile)) {
+                Files.createDirectories(dir);
+                Files.createFile(pathToFile);
             }
-            if (!file.exists()) {
-                file.createNewFile();
-            }
-        } catch (IOException e) {
-            log.error("Ошибка при создании файла", e);
-        }
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
-            writer.write(xml);
+            Files.writeString(pathToFile, xml, StandardCharsets.UTF_8);
             log.info("Файл xml сохранен");
-        } catch (FileNotFoundException e) {
-            log.error("Файл не найден", e);
-        } catch(IOException e) {
+        } catch (IOException e) {
             log.error("Ошибка при записи в файл", e);
         }
     }
