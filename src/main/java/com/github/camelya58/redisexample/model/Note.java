@@ -19,5 +19,4 @@ public class Note {
         private String author;
         private String title;
         private String content;
-
 }

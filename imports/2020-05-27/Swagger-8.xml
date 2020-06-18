@@ -1,0 +1,11 @@
+<Documents>
+    <Document>
+        <Note>
+            <NoteId>8</NoteId>
+            <Author>Kamila M.</Author>
+            <Tittle>Swagger</Tittle>
+            <Content>Make mini-project with swagger by https://www.baeldung.com/swagger-2-documentation-for-spring-rest-api.</Content>
+            <Date>2020-05-27</Date>
+        </Note>
+    </Document>
+</Documents>

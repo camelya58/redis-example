@@ -1,0 +1,11 @@
+<Documents>
+    <Document>
+        <Note>
+            <NoteId>10</NoteId>
+            <Author>Kamila M.</Author>
+            <Tittle>PostgreSQL</Tittle>
+            <Content>Make a project for Ubuntu with Kafka and PostgreSQL, add in README postgres commands.</Content>
+            <Date>2020-06-18</Date>
+        </Note>
+    </Document>
+</Documents>
